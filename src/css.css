@@ -2,19 +2,23 @@
 
 /* Font defs */
 
-/* TODO: Generate these files */
+/* TODO: Generate andp point these defs to subsetted font files */
 /* TODO: Preload these in HEAD? Or inline and remove FOUT entirely? No that's not user right, but maybe test */
 @font-face {
-  font-family: "Charter BT Subset";
-  src: inline-font("assets/fonts/charter-bt-roman-subset.mv1.woff2") format('woff2');
+  font-family: "Charter BT";
+  src:
+    url("/assets/charter-bt-roman.mv1.woff2") format('woff2'),
+    url("/assets/charter-bt-roman.mv1.woff") format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Charter BT Subset";
-  src: inline-font("assets/fonts/charter-bt-italic-subset.mv1.woff2") format('woff2');
+  font-family: "Charter BT";
+  src:
+    url("/assets/charter-bt-italic.mv1.woff2") format('woff2'),
+    url("/assets/charter-bt-italic.mv1.woff") format('woff');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -93,7 +97,7 @@ a:visited {
 :root {
   color: hsl(0, 0%, 14%); /* off-black */
   line-height: 1.45; /* or maybe 1.4 */
-  font-family: "Charter BT Subset", "Times New Roman", serif;
+  font-family: "Charter BT", "Times New Roman", serif;
   font-size: 112.5%; /* 18px */
   font-synthesis: none; /* disable faux font variants */
   background-color: white;
