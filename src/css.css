@@ -1,0 +1,162 @@
+/* TODO: Apply browserslist and autoprefixing */
+
+/* Font defs */
+
+/* TODO: Generate these files */
+/* TODO: Preload these in HEAD? Or inline and remove FOUT entirely? No that's not user right, but maybe test */
+@font-face {
+  font-family: "Charter BT Subset";
+  src: inline-font("assets/fonts/charter-bt-roman-subset.mv1.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Charter BT Subset";
+  src: inline-font("assets/fonts/charter-bt-italic-subset.mv1.woff2") format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Reset and normalize global element styles */
+
+body {
+  margin: 0;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+/*
+  Reset text elements for easy semantic use. Only reset elements used on this page.
+  https://web.archive.org/web/20160422140410/http://anthonyshort.me/global-typographic-styles-suck/
+*/
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: block;
+  list-style: none;
+}
+
+h1 {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  outline: none;
+  text-decoration: none;
+}
+
+/* App specific styles */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* TODO: Add custom focus styles */
+:focus {
+  outline: none;
+}
+
+::selection {
+  color: white;
+  text-shadow: none;
+  background-color: hsl(326, 36%, 65%); /* purple-desaturated */
+}
+
+:root {
+  color: hsl(0, 0%, 14%); /* off-black */
+  line-height: 1.45; /* or maybe 1.4 */
+  font-family: "Charter BT Subset", "Times New Roman", serif;
+  font-size: 112.5%; /* 18px */
+  font-synthesis: none; /* disable faux font variants */
+  background-color: white;
+}
+
+.main {
+  padding: 2.25rem 1.5rem 1.5rem;
+  max-width: 35rem;
+}
+
+.title {
+  font-size: 1.85rem;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.content {
+  margin-bottom: 2.5rem;
+}
+
+/* .content is a markdown-like text container. Style markdown elements with descendent selectors. */
+.content a {
+  /* @mixin link; */
+}
+
+.content p {
+  margin-bottom: 1rem;
+}
+
+.footer {}
+
+.svg-defs {
+  display: none;
+}
+
+.links {
+  list-style-type: none;
+}
+
+.link-item {}
+
+.link {}
+
+.link-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+
+  margin-right: 0.5rem;
+}
+
+.link:hover .link-icon,
+.link:focus .link-icon {
+  /* Try this one too -- I liked it at some point. hsl(347, 83%, 70%); */
+  fill: hsl(347, 83%, 80%); /* pink-desaturated */
+}
+
+/* Replace these mixins with @supports rules and text-decoration styles */
+.link-text {
+  /* @mixin link-base; */
+}
+
+.link:hover .link-text,
+.link:focus .link-text {
+  /* @mixin link-activated; */
+}
