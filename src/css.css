@@ -1,8 +1,15 @@
 /* TODO: Apply browserslist and autoprefixing */
 
+/*
+  Color Key:
+  off black: hsl(0, 0%, 14%)
+  desaturated pink: hsl(347, 83%, 80%)
+  desaturated purple: hsl(326, 36%, 65%)
+*/
+
 /* Font defs */
 
-/* TODO: Generate andp point these defs to subsetted font files */
+/* TODO: Generate and point these defs to subsetted font files */
 /* TODO: Preload these in HEAD? Or inline and remove FOUT entirely? No that's not user right, but maybe test */
 @font-face {
   font-family: "Charter BT";
@@ -91,11 +98,11 @@ a:visited {
 ::selection {
   color: white;
   text-shadow: none;
-  background-color: hsl(326, 36%, 65%); /* purple-desaturated */
+  background-color: hsl(326, 36%, 65%);
 }
 
 :root {
-  color: hsl(0, 0%, 14%); /* off-black */
+  color: hsl(0, 0%, 14%);
   line-height: 1.45; /* or maybe 1.4 */
   font-family: "Charter BT", "Times New Roman", serif;
   font-size: 112.5%; /* 18px */
@@ -152,15 +159,32 @@ a:visited {
 .link:hover .link-icon,
 .link:focus .link-icon {
   /* Try this one too -- I liked it at some point. hsl(347, 83%, 70%); */
-  fill: hsl(347, 83%, 80%); /* pink-desaturated */
+  fill: hsl(347, 83%, 80%);
 }
 
-/* Replace these mixins with @supports rules and text-decoration styles */
+/*
+  When browser support for text-decortation skip-ink, thickness, and offset
+  improves we can use them instead of this clever CSS.
+*/
+
 .link-text {
-  /* @mixin link-base; */
+  text-shadow:
+    0.06em 0  white,
+    -0.06em 0  white,
+    0.09em 0  white,
+    -0.09em 0  white,
+    0.12em 0  white,
+    -0.12em 0  white,
+    0.15em 0  white,
+    -0.15em 0  white;
+
+  background-image: linear-gradient(hsl(0, 0%, 14%), white);
+  background-size: 5px 1.5px;
+  background-position: 0 0.9em;
+  background-repeat: repeat-x;
 }
 
 .link:hover .link-text,
 .link:focus .link-text {
-  /* @mixin link-activated; */
+  background-image: linear-gradient(hsl(347, 83%, 80%), hsl(347, 83%, 80%));
 }
