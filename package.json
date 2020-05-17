@@ -1,0 +1,9 @@
+{
+  "name": "rw-metal",
+  "version": "0.0.0",
+  "description": "Minimal, close to the metal robwierzbowski.com site",
+  "author": "Rob Wierzbowski <rob.wierzbowski@gmail.com>",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
