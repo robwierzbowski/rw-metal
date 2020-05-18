@@ -15,8 +15,10 @@ npm install
 npm start
 
 # Build for production
-npm ???
+# npm ??? There's currently no build process but gzipping 💎⚡️.
 
 # Deploy
-npm ???
+# npm ??? Currently using my old gulp-based AWS publisher
+# (https://github.com/robwierzbowski/publisher), but let's build a script with
+# less dependencies (s3cmd-based?) before we make it official.
 ```
