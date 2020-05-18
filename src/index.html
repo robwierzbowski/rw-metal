@@ -122,21 +122,39 @@
     :root {
       color: hsl(0, 0%, 14%);
       font-family: "Charter BT", "Times New Roman", serif;
-      font-size: 112.5%;
       font-synthesis: none; /* disable faux font variants */
       line-height: 1.45;
       background-color: white;
+      font-size: 112.5%;
+    }
+
+    @media (min-width: 370px) {
+      :root {
+        font-size: 125%;
+      }
     }
 
     .main {
       max-width: 35rem;
-      padding: 2.25rem 1.5rem 1.5rem;
+      padding: 2.25rem 1.5rem 5rem;
+    }
+
+    @media (min-width: 560px) {
+      .main {
+        padding-bottom: 3.5rem;
+      }
     }
 
     .title {
       margin-bottom: 1.25rem;
-      font-size: 1.85rem;
+      font-size: 1.75rem;
       line-height: 1.2;
+    }
+
+    @media (min-width: 370px) {
+      .title {
+        font-size: 1.85rem;
+      }
     }
 
     .content {
