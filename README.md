@@ -12,7 +12,7 @@ nvm use
 npm install
 
 # Develop locally
-npm run serve
+npm start
 
 # Build for production
 npm ???

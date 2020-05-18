@@ -4,7 +4,7 @@
   "description": "Minimal, close to the metal robwierzbowski.com site",
   "author": "Rob Wierzbowski <rob.wierzbowski@gmail.com>",
   "scripts": {
-    "serve": "http-server ./src -p 9000 -o"
+    "start": "http-server ./src -p 9000 -o"
   },
   "dependencies": {},
   "devDependencies": {
