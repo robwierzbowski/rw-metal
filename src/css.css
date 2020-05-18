@@ -125,38 +125,22 @@ a:visited {
   margin-bottom: 2.5rem;
 }
 
-/* .content is a markdown-like text container. Style markdown elements with descendent selectors. */
+/*
+  .content is a markdown-like text container. Use it to scope and style
+  markdown-like elements with descendent selectors.
+*/
 .content p {
   margin-bottom: 1rem;
-}
-
-.svg-defs {
-  display: none;
-}
-
-.links {
-  list-style-type: none;
-}
-
-.link-icon {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-
-  margin-right: 0.5rem;
-}
-
-.link:hover .link-icon,
-.link:focus .link-icon {
-  /* Try this one too -- I liked it at some point. hsl(347, 83%, 70%); */
-  fill: hsl(347, 83%, 80%);
 }
 
 /*
   When browser support for text-decortation skip-ink, thickness, and offset
   improves I can use them instead of this clever CSS.
-*/
 
+  I'd normally use a mixin to apply the same styles to link-text and keep the
+  selectors grouped logically, but this is a vanilla, no compilation CSS
+  experiment.
+*/
 .content a,
 .link-text {
   text-shadow:
@@ -180,4 +164,26 @@ a:visited {
 .link:hover .link-text,
 .link:focus .link-text {
   background-image: linear-gradient(hsl(347, 83%, 80%), hsl(347, 83%, 80%));
+}
+
+.svg-defs {
+  display: none;
+}
+
+.links {
+  list-style-type: none;
+}
+
+.link-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+
+  margin-right: 0.5rem;
+}
+
+.link:hover .link-icon,
+.link:focus .link-icon {
+  /* Try this one too -- I liked it at some point. hsl(347, 83%, 70%); */
+  fill: hsl(347, 83%, 80%);
 }
