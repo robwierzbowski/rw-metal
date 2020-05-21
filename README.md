@@ -19,10 +19,11 @@ npm start # Make the local development site available to glyphhanger
 npm subset path/to/font
 
 # Build for production
-# npm ??? There's currently no build process but gzipping 💎⚡️.
+# There's currently no build process but gzipping 💎⚡️.
 
 # Deploy
-# npm ??? Currently using my old gulp-based AWS publisher
-# (https://github.com/robwierzbowski/publisher), but let's build a script with
-# less dependencies (s3cmd-based?) before we make it official.
+# npm ???
+# I'm using my old gulp publisher package to deploy
+# (https://github.com/robwierzbowski/publisher), but let's try building a script
+# based off the s3cmd tool. Maybe see what zopfli can do over gzip.
 ```
