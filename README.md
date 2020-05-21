@@ -14,6 +14,10 @@ npm install
 # Develop locally
 npm start
 
+# Subset fonts using https://github.com/filamentgroup/glyphhanger
+npm start # Make the local development site available to glyphhanger
+npm subset path/to/font
+
 # Build for production
 # npm ??? There's currently no build process but gzipping 💎⚡️.
 
