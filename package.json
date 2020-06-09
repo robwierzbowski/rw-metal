@@ -5,7 +5,8 @@
   "author": "Rob Wierzbowski <rob.wierzbowski@gmail.com>",
   "scripts": {
     "start": "http-server ./src -p 9000 -o",
-    "subset": "glyphhanger http://127.0.0.1:9000/ --family='Charter BT' --formats=woff2,woff --subset"
+    "subset": "glyphhanger http://127.0.0.1:9000/ --family='Charter BT' --formats=woff2,woff --subset",
+    "deploy": "node deploy.js"
   },
   "dependencies": {},
   "devDependencies": {
