@@ -10,6 +10,7 @@
   "dependencies": {},
   "devDependencies": {
     "glyphhanger": "^3.2.0",
-    "http-server": "^0.12.3"
+    "http-server": "^0.12.3",
+    "recursive-readdir": "^2.2.2"
   }
 }
